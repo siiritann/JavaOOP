@@ -1,28 +1,37 @@
 public class main {
-    public static void main (String [] args){
+    public static void main (String [] args) {
 
-        // System.out.println("Hello Siiri");
+        ContactsManager myContactsManager = new ContactsManager();
 
-        ContactsManager myContactManager = new ContactsManager();
+        // Using first constructor
 
-        Contact friendJames = new Contact();
-        friendJames.name = "James";
-        friendJames.phoneNumber = "00123";
+        Contact james = new Contact();
+        james.name = "james";
+        james.phoneNumber = "123";
+        myContactsManager.addContact(james);
 
-        myContactManager.addContact(friendJames);
+        Contact jennie = new Contact();
+        jennie.name = "jennie";
+        jennie.phoneNumber = "4777";
+        myContactsManager.addContact(jennie);
 
-        Contact friendMari = new Contact();
-        friendMari.name = "Mari";
-        friendMari.phoneNumber = "0023";
 
-        myContactManager.addContact(friendMari);
+        // Using second constructor
 
-        Contact result = myContactManager.searchContact("Mari");
-        System.out.println(result.phoneNumber);
+        Contact mihkel = new Contact("mihkel", "999");
+        myContactsManager.addContact(mihkel);
 
-        // Mihkli kontakti loomine
-        Contact jyri = new Contact("Jyri", "23567");
+        System.out.println(myContactsManager.friendsCount);
+
+        // System.out.println(myContactsManager.searchContact("a").phoneNumber); //
+
+        Contact result = myContactsManager.searchContact("a");
+        if (result == null){
+            System.out.println("No contact found");
+        }
+        else {
+            System.out.println(result.phoneNumber);
+        }
 
     }
-
 }

@@ -4,7 +4,7 @@ public class main {
         Simulation s = new Simulation();
 
         try {
-        s.runSimulation(s.loadU2(s.loadItems(2)));
+        s.runSimulation(s.loadU1(s.loadItems(1)));
         }
         catch (Exception e) {
             System.out.println(e);

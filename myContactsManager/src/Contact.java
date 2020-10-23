@@ -1,19 +1,18 @@
 public class Contact {
-    // Fields
     String name;
     String email;
     String phoneNumber;
 
-    // Constructor for initialize
+    // Constructor 1
     Contact() {
-        this.name = "Mari";
-        this.phoneNumber = "58131763";
+        this.name = "";
+        this.phoneNumber = "";
     }
 
-    // Mihkli constructor
+    // Constructor 2
     Contact(String name, String number) {
         this.name = name;
         this.phoneNumber = number;
     }
-
 }
+
